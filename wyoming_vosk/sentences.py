@@ -1,17 +1,18 @@
 import argparse
+import functools
 import itertools
 import logging
 import re
 import sqlite3
 import time
 from collections import abc
+from copy import deepcopy
 from dataclasses import dataclass, field
 from functools import partial
 from pathlib import Path
 from typing import TYPE_CHECKING, Any, Dict, Iterable, List, Optional, Set, Tuple, Union
-from copy import deepcopy
+
 from deepmerge import always_merger
-import functools
 
 if TYPE_CHECKING:
     from hassil.expression import Expression, Sentence
